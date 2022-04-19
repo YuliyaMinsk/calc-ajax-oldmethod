@@ -1,14 +1,10 @@
 const inputRub = document.getElementById('rub');
 const inputUsd = document.getElementById('usd');
 
-// I use API from https://www.cbr-xml-daily.ru/
-
 inputRub.addEventListener('input', () => {
   const request = new XMLHttpRequest();
 
-  // request.open('GET', './js/current.json');
   request.open('GET', 'https://www.cbr-xml-daily.ru/daily_json.js');
-  // request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
   request.send();
 
   request.addEventListener('load', () => {
@@ -25,9 +21,7 @@ inputRub.addEventListener('input', () => {
 inputUsd.addEventListener('input', () => {
   const request = new XMLHttpRequest();
 
-  // request.open('GET', './js/current.json');
   request.open('GET', 'https://www.cbr-xml-daily.ru/daily_json.js');
-  // request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
   request.send();
 
   request.addEventListener('load', () => {
